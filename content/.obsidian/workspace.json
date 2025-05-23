@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ja/posts/Kamal を使用した Web サービス（PostgreSQL を含む）のデプロイ方法.md",
+                "file": "zh/posts/中日文字异常问题分析和三种解决方案.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kamal を使用した Web サービス（PostgreSQL を含む）のデプロイ方法"
+              "title": "中日文字异常问题分析和三种解决方案"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 248.5
+    "width": 338.5
   },
   "right": {
     "id": "b2879dc3cfa1bab7",
@@ -170,8 +170,11 @@
   },
   "active": "154a36a15e9e71b6",
   "lastOpenFiles": [
-    "zh/posts/使用Kamal部署Web服务（包括Postgres）.md",
+    "ja/posts/中日文字化け問題の解析と3つの解決方法.md",
+    "ja/posts/中日文字異常問題の分析と3つの解決策.md",
     "zh/posts/PWA 应用图标：如何兼顾 macOS、Windows、iPad.md",
+    "zh/posts/中日文字异常问题分析和三种解决方案.md",
+    "zh/posts/使用Kamal部署Web服务（包括Postgres）.md",
     "ja/posts/Kamal を使用した Web サービス（PostgreSQL を含む）のデプロイ方法.md"
   ]
 }

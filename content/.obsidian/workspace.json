@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "400025d20d0e2139",
+        "id": "b4bd0edd44fce6f7",
         "type": "tabs",
         "children": [
           {
-            "id": "154a36a15e9e71b6",
+            "id": "b148de95639a48b8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "zh/posts/中日文字异常问题分析和三种解决方案.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "中日文字异常问题分析和三种解决方案"
+              "title": "新标签页"
             }
           }
         ]
@@ -78,7 +74,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 338.5
+    "width": 338.5,
+    "collapsed": true
   },
   "right": {
     "id": "b2879dc3cfa1bab7",
@@ -168,12 +165,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "154a36a15e9e71b6",
+  "active": "b148de95639a48b8",
   "lastOpenFiles": [
+    "zh/posts/换一种思路解决问题： macOS mediaanalysisd 程序占用磁盘70G.md",
+    "zh/posts/换一种思路解决问题： macOS mediaanalysisd 进程占用磁盘70G.md",
+    "zh/posts/换一种思路解决问题： macOS mediaanalysisd 占用磁盘70G.md",
+    "Pasted image 20250609003346.png",
+    "zh/posts/中日文字异常问题分析和三种解决方案.md",
     "ja/posts/中日文字化け問題の解析と3つの解決方法.md",
     "ja/posts/中日文字異常問題の分析と3つの解決策.md",
     "zh/posts/PWA 应用图标：如何兼顾 macOS、Windows、iPad.md",
-    "zh/posts/中日文字异常问题分析和三种解决方案.md",
     "zh/posts/使用Kamal部署Web服务（包括Postgres）.md",
     "ja/posts/Kamal を使用した Web サービス（PostgreSQL を含む）のデプロイ方法.md"
   ]

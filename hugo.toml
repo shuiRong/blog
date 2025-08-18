@@ -28,7 +28,17 @@ tabWidth = 4
 [params]
 mainSections = ["posts"]
 headTitle = "shuirong"
-# extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-xxx"></script>'
+extraHead = """
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-38VFFL9CGZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-38VFFL9CGZ');
+</script>
+"""
+
 # [[params.socials]]
 # name = "About Me"
 # link = "https://joway.io"

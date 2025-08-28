@@ -212,4 +212,4 @@ end
 <.button href={~p"/auth/google"}>Login with Google</.button>
 ```
 
-**大功告成。现在用户可以 Google 登录方便地访问你的网站。**
+**大功告成。现在用户可以通过 Google 登录方便地访问你的网站。**

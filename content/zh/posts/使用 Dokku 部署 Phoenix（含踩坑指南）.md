@@ -1,6 +1,6 @@
 +++
 date = '2025-08-21T22:41:51+09:00'
-draft = true
+draft = false
 title = '使用 Dokku 部署 Phoenix（含踩坑指南）'
 categories= ['Programming']
 tags= ['Elixir', 'Deploy', 'Phoenix', 'Dokku', 'Postgres', 'Cloudflare']

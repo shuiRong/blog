@@ -15,12 +15,16 @@ tags= ['Elixir', 'Deploy', 'Phoenix', 'Dokku', 'Postgres', 'Cloudflare']
 
 ## Dokku 工作原理
 
+---
+
 首先得解释下 Dokku 大概的工作原理，这对于搞清楚状况、排查问题很有帮助，如果已经清楚，可以直接跳到下面看「部署步骤」：
 
 1. 它是一个安装在服务器上的程序，运行了一个 Git 服务器（当然还有别的模块）。当你在其他地方的代码仓库里向该 Git 服务器推送代码时，它会收到通知（Git Hook）然后运行部署流程。
 2. 你的程序在服务器上是通过 Docker 实例的方式运行的。而 Docker Image 是在你推送代码到服务器上后，Dokku 在服务器上构建出来的。构建时优先使用 Dockefile，没有的话就用 Herokuish（约等于 Heroku 的 Buildpack，即用来打包 Docker Image 的一系列脚本）
 
 ## 部署步骤
+
+---
 
 **首先，最终部署的成果：** Phoenix 程序，连接 Postgres 数据库，使用 Cloudflare 托管的域名。
 
@@ -156,5 +160,53 @@ dokku buildpacks:set-property my-app stack gliderlabs/herokuish:latest-22
 ```bash
 # 可以同时设置多个环境变量
 # 每次设置后，都会触发重启应用程序。如果程序还没部署也没关系，尽管设置
-dokku config:set node-js-app ENV=prod COMPILE_ASSETS=1
+dokku config:set my-app ENV=prod COMPILE_ASSETS=1
 ```
+
+7. 自动更新数据库迁移文件
+
+我的项目需要操作数据库，本地的 Phoenix 程序中存在一些迁移文件，我希望在每次部署时都能自动执行迁移命令。
+这需要在项目根目录下创建一个 `app.json` 文件
+
+```elixir
+{
+  "scripts": {
+    "dokku": {
+      "postdeploy": "mix ecto.migrate"
+    }
+  }
+}
+```
+
+Dokku 还有其他部署钩子可以用在其他用途，可以参考[Dokku 文档](https://dokku.com/docs/appendices/file-formats/app-json/?h=postde#scripts)。
+
+8. 设置新的远程 git origin
+
+```bash
+git remote add dokku dokku@<mydomain.com>:<app_name>
+```
+
+将你的 git 公钥添加到 Dokku 服务器上
+
+公钥地址（假如你之前本地已经配置过 ssh 登录 Github 的话，一般是存在这个文件）：`~/.ssh/id_rsa.pub`
+将文件内容手动追加到服务器上的 `~/.ssh/authorized_keys` 文件中
+
+9. 部署程序
+
+以后只要想部署一次代码，就在本地项目下运行该命令即可：
+
+```bash
+git push dokku main
+```
+
+但是可能你的仓库之前是保存在 Github 里，所以每次每次部署完，还是需要手动再推送代码到 Github ：
+
+```bash
+git push
+```
+
+---
+
+**其他：**
+
+1. 因为我的域名托管在 Cloudflare，所以可以直接利用它的Proxy给域名提供 https 服务。就不需要使用 Dokku 的 https 相关功能了。

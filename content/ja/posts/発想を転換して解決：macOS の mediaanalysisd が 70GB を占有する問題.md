@@ -7,7 +7,7 @@ tags= ['macOS']
 +++
 
 最近、ストレージ残量が少ないと macOS に警告されました。OmniDiskSweeper で調べてみると、`/Users/<user_name>/Library/Containers/com.apple.mediaanalysisd/Data/Library/Caches/com.apple.mediaanalysisd` が約 70GB も占めていました。
-![macos-mediaanalysisd.png](/img/macos-mediaanalysisd.png)
+![macos-mediaanalysisd.webp](/img/macos-mediaanalysisd.webp)
 
 ### mediaanalysisd とは？
 

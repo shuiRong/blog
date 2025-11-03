@@ -7,7 +7,7 @@ tags= ['macOS']
 +++
 
 Recently macOS warned me that I was running out of space. OmniDiskSweeper pointed at `/Users/<user_name>/Library/Containers/com.apple.mediaanalysisd/Data/Library/Caches/com.apple.mediaanalysisd`, which was nearly 70 GB.
-![macos-mediaanalysisd.png](/img/macos-mediaanalysisd.png)
+![macos-mediaanalysisd.webp](/img/macos-mediaanalysisd.webp)
 
 ### What is mediaanalysisd?
 

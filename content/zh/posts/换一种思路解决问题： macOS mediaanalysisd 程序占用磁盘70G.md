@@ -7,7 +7,7 @@ tags= ['macOS']
 +++
 
 最近系统提示我剩余磁盘空间不足，我通过 OmniDiskSweeper 检查后，发现 `/Users/<user_name>/Library/Containers/com.apple.mediaanalysisd/Data/Library/Caches/com.apple.mediaanalysisd` 目录占用了差不多 70G 的大小。
-![macos-mediaanalysisd.png](/img/macos-mediaanalysisd.png)
+![macos-mediaanalysisd.webp](/img/macos-mediaanalysisd.webp)
 
 ### mediaanalysisd 是什么？
 
